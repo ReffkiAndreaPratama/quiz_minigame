@@ -54,7 +54,7 @@ Progressive enhancement
 Reffki Andrea Pratama
 Frontend Developer
 ⭐ If you find this project interesting, feel free to give it a star!
-⚠️ Ganti:
+⚠️ 
 - `tama`
 - `Reffki Andrea Pratama`
 ---
