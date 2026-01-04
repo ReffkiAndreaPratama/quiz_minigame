@@ -1,0 +1,207 @@
+/* =========================
+   ROOT THEME
+========================= */
+:root {
+  --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+
+  --primary: #6366f1;
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  --radius: 16px;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   BASE
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-main);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* =========================
+   CARD (GLASS)
+========================= */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  animation: fadeUp 0.4s ease;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  border: none;
+  padding: 12px 14px;
+  margin-top: 10px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* ✅ WARNA AMAN */
+  background: #f1f5f9;
+  color: #0f172a;   /* ⬅️ TEKS GELAP */
+  
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #e2e8f0;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================
+   OPTION STATES
+========================= */
+.option {
+  background: #f8fafc;
+  color: #0f172a;   /* teks gelap */
+}
+
+
+.correct {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid var(--success);
+  color: #065f46;
+}
+
+.wrong {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid var(--danger);
+  color: #7f1d1d;
+}
+
+/* =========================
+   DIFFICULTY SELECT
+========================= */
+.difficulty {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.difficulty button {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.start {
+  grid-column: span 3;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;        /* putih hanya di tombol ini */
+  font-weight: 700;
+}
+
+.start:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+
+/* =========================
+   TIMER
+========================= */
+p {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #6366f1);
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   REVIEW
+========================= */
+.review {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #cbd5f5;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+}
