@@ -41,6 +41,7 @@ Open browser at:
 http://localhost:5173
 ```
 🌐 Live Demo
+https://reffkiandreapratama.github.io/quiz_minigame/
 
 📚 What This Project Demonstrates
 Component-based architecture
